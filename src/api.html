@@ -1,0 +1,45 @@
+<script>
+    fetch("https://jsonplaceholder.typicode.com/users").then((apiData) => {
+        console.log(apiData)
+        return apiData.json();
+    }).then((data)=>{
+        console.log(data)
+        let arr = []
+        for (i of data) {
+            arr.push(i.id)
+        }
+        document.write(arr[0])
+        
+    })
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border"
+             role="status" id="loading">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <h1>Api Data</h1>
+    <table id="employees"></table>
+
+</body>
+</html> -->
